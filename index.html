@@ -3,52 +3,360 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The personal website of Moshe Morgenstern — technology, leadership, and practical innovation.">
-  <meta name="theme-color" content="#152338">
-  <title>Moshe Morgenstern | Personal Website</title>
+  <meta name="description" content="A personal website for Moshe Morgenstern, reflecting Torah values, meaningful connections, and favorite resources.">
+  <meta name="theme-color" content="#2f2317">
+  <title>Moshe Morgenstern | Torah & Personal Links</title>
   <style>
-    :root {color-scheme:light; --navy:#152338; --navy2:#203753; --cream:#f8f6f1; --gold:#b79a65; --ink:#1d2733; --muted:#586474; --line:#e3e2dd;}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.65}a{color:inherit}a:focus-visible{outline:3px solid var(--gold);outline-offset:5px}
-    .wrap{width:min(1100px,calc(100% - 48px));margin-inline:auto}.hero{background:radial-gradient(circle at 85% 14%,#2a4260 0%,transparent 35%),linear-gradient(140deg,var(--navy),#1a304a);color:white;min-height:600px;display:flex;flex-direction:column}.nav{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-block:30px}.brand{font-size:.82rem;letter-spacing:.18em;font-weight:700;text-decoration:none;white-space:nowrap}.links{display:flex;gap:32px}.links a{font-size:.9rem;text-decoration:none;color:#d8e1ea}.links a:hover{color:white}.hero-content{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:80px 0 120px;max-width:800px}.eyebrow{letter-spacing:.3em;text-transform:uppercase;color:#d8bd87;font-size:.76rem;font-weight:700}.hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.035em;line-height:1.08;font-size:clamp(3.4rem,8vw,6.8rem);margin:18px 0 26px}.gold-line{height:3px;width:60px;background:var(--gold);margin:0 0 28px}.hero p{max-width:660px;color:#dae3ea;font-size:clamp(1.05rem,2vw,1.32rem);line-height:1.8;margin:0}.content{padding-block:95px 100px}.section-grid{display:grid;grid-template-columns:1fr 2fr;gap:70px}.section-label{color:#90774e;text-transform:uppercase;letter-spacing:.2em;font-size:.78rem;font-weight:700;padding-top:10px}.content h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(2rem,4vw,3rem);line-height:1.2;margin:0 0 24px}.content p{font-size:1.06rem;color:#495665;max-width:660px}.values{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:70px;padding-top:35px;border-top:1px solid var(--line)}.value{padding-right:16px}.value h3{font-size:1rem;margin:0 0 8px;color:#273448}.value p{font-size:.95rem;margin:0}.contact{background:#edeae2;padding:62px 0}.contact-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}.contact h2{font-family:Georgia,"Times New Roman",serif;font-size:2rem;font-weight:400;margin:0 0 8px}.contact p{margin:0;color:#566170}.contact-note{color:#68717b;font-size:.9rem}.footer{display:flex;justify-content:space-between;gap:15px;padding-block:26px;color:#6a7480;font-size:.83rem}@media(max-width:720px){.wrap{width:min(100% - 36px,1100px)}.hero{min-height:570px}.nav{padding-block:22px}.links{gap:18px}.links a{font-size:.8rem}.brand{font-size:.68rem;letter-spacing:.1em}.hero-content{padding:80px 0 100px}.section-grid{grid-template-columns:1fr;gap:20px}.content{padding-block:65px}.values{grid-template-columns:1fr;gap:22px;margin-top:45px}.contact-inner{display:block}.contact-note{margin-top:18px;display:block}.footer{flex-direction:column}}
+    :root{
+      color-scheme:light;
+      --bg:#f6f0e5;
+      --paper:#fbf7ef;
+      --paper-2:#efe4cf;
+      --ink:#2c241d;
+      --muted:#65594a;
+      --gold:#b58a4b;
+      --brown:#5b4431;
+      --deep:#35281d;
+      --line:#dcc9ad;
+      --olive:#7b6d4b;
+      --shadow:0 14px 50px rgba(60,42,18,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(181,138,75,.12), transparent 32%),
+        radial-gradient(circle at 100% 20%, rgba(123,109,75,.08), transparent 28%),
+        linear-gradient(180deg, #fcf8f1 0%, var(--bg) 100%);
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height:1.7;
+    }
+    a{color:inherit}
+    a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+    .wrap{width:min(1120px, calc(100% - 42px)); margin-inline:auto}
+    .serif{font-family: Georgia, "Times New Roman", serif}
+    .site-top{
+      position:relative;
+      overflow:hidden;
+      border-bottom:1px solid rgba(106,78,44,.15);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.60), rgba(255,255,255,0)),
+        linear-gradient(135deg, rgba(120,87,45,.08), rgba(255,255,255,0) 55%);
+    }
+    .site-top::before{
+      content:"";
+      position:absolute; inset:-60px -40px auto auto;
+      width:460px; height:460px;
+      opacity:.17;
+      background-repeat:no-repeat;
+      background-size:contain;
+      background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'><g fill='none' stroke='%2389683f' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M146 193c55-68 240-59 304 17'/><path d='M172 217c52-52 197-42 252 16'/><path d='M208 255c44-30 137-28 182 6'/><path d='M144 350c62-48 235-46 302 7'/><path d='M172 381c57-36 188-31 245 9'/><path d='M147 184l-24 235'/><path d='M452 210l26 215'/><path d='M120 419c95 28 281 28 384-8'/><path d='M224 136c30-13 109-17 154 2'/></g></svg>");
+      pointer-events:none;
+    }
+    .nav{
+      display:flex; justify-content:space-between; align-items:center; gap:18px;
+      padding:26px 0 18px;
+      position:relative; z-index:2;
+    }
+    .brand{
+      text-decoration:none; color:var(--deep);
+      letter-spacing:.16em; font-size:.82rem; font-weight:700; white-space:nowrap;
+    }
+    .nav-links{display:flex; gap:24px; flex-wrap:wrap}
+    .nav-links a{text-decoration:none; color:var(--muted); font-size:.95rem}
+    .nav-links a:hover{color:var(--deep)}
+    .hero{
+      display:grid; grid-template-columns:1.2fr .8fr; gap:42px; align-items:center;
+      padding:28px 0 74px; position:relative; z-index:1;
+    }
+    .eyebrow{
+      display:inline-block;
+      padding:8px 12px;
+      border:1px solid rgba(181,138,75,.45);
+      background:rgba(255,255,255,.55);
+      border-radius:999px;
+      color:#87693b; font-size:.78rem; letter-spacing:.22em; text-transform:uppercase; font-weight:700;
+      margin-bottom:16px;
+    }
+    h1{
+      margin:0;
+      color:var(--deep);
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(3rem, 6.3vw, 5.6rem);
+      line-height:1.03; font-weight:500; letter-spacing:-.03em;
+    }
+    .hebrew{
+      margin:14px 0 0;
+      color:#7c6140;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(1rem, 1.9vw, 1.3rem);
+      letter-spacing:.06em;
+    }
+    .lead{max-width:700px; color:#534839; font-size:1.12rem; margin:24px 0 0}
+    .hero-actions{display:flex; gap:14px; flex-wrap:wrap; margin-top:30px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:13px 18px; border-radius:999px; text-decoration:none; font-weight:700;
+      border:1px solid transparent; transition:transform .15s ease, box-shadow .15s ease;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{background:var(--deep); color:#fff; box-shadow:var(--shadow)}
+    .btn.secondary{background:rgba(255,255,255,.7); color:var(--deep); border-color:#d4c1a1}
+
+    .hero-art{
+      position:relative;
+      background:linear-gradient(180deg, rgba(255,255,255,.86), rgba(248,242,232,.9));
+      border:1px solid rgba(162,129,80,.22);
+      border-radius:28px;
+      min-height:420px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .hero-art::before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        linear-gradient(transparent 92%, rgba(86,61,34,.05) 92%, rgba(86,61,34,.05) 100%),
+        radial-gradient(circle at 22% 18%, rgba(181,138,75,.20), transparent 30%),
+        radial-gradient(circle at 82% 78%, rgba(123,109,75,.14), transparent 25%);
+      pointer-events:none;
+    }
+    .scroll-frame{
+      position:absolute; inset:22px;
+      border:1px dashed rgba(140,111,69,.42);
+      border-radius:22px;
+      display:grid; place-items:center;
+      padding:22px;
+    }
+    .sketch-card{
+      width:min(100%, 320px); aspect-ratio:4/5;
+      background:linear-gradient(180deg, #f9f3e7, #efe2c9);
+      border:1px solid rgba(124,97,64,.24);
+      border-radius:24px;
+      position:relative;
+      box-shadow:0 12px 32px rgba(70,49,25,.10);
+      overflow:hidden;
+    }
+    .sketch-card svg{position:absolute; inset:0; width:100%; height:100%}
+    .sketch-label{
+      position:absolute; left:18px; right:18px; bottom:18px;
+      background:rgba(255,255,255,.7);
+      border:1px solid rgba(124,97,64,.18);
+      backdrop-filter: blur(4px);
+      border-radius:18px;
+      padding:14px 16px;
+    }
+    .sketch-label strong{display:block; font-size:1rem; color:var(--deep)}
+    .sketch-label span{display:block; font-size:.88rem; color:var(--muted); margin-top:4px}
+
+    main{padding:56px 0 80px}
+    .section{margin-top:28px}
+    .section-title{
+      display:flex; align-items:center; gap:14px; margin-bottom:22px;
+      color:var(--deep)
+    }
+    .section-title::before{
+      content:""; width:46px; height:3px; border-radius:99px; background:var(--gold); flex:0 0 auto;
+    }
+    h2{margin:0; font:500 clamp(1.9rem, 3.6vw, 3rem)/1.15 Georgia, "Times New Roman", serif}
+    .intro-grid{display:grid; grid-template-columns:.95fr 1.05fr; gap:26px}
+    .panel{
+      background:rgba(255,255,255,.62);
+      border:1px solid rgba(170,133,80,.18);
+      border-radius:24px;
+      padding:26px;
+      box-shadow:var(--shadow);
+    }
+    .panel p{margin:0 0 14px; color:#514536}
+    .quote{font:italic 1.15rem/1.7 Georgia, serif; color:#654e2d}
+    .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:12px}
+    .link-card{
+      display:block; text-decoration:none; padding:22px;
+      background:linear-gradient(180deg, rgba(255,255,255,.82), rgba(247,240,227,.82));
+      border:1px solid rgba(169,133,82,.18);
+      border-radius:22px; box-shadow:var(--shadow);
+      transition:transform .16s ease, border-color .16s ease;
+    }
+    .link-card:hover{transform:translateY(-3px); border-color:rgba(181,138,75,.55)}
+    .link-card small{display:block; color:#8a6e45; text-transform:uppercase; letter-spacing:.16em; font-weight:700; margin-bottom:8px}
+    .link-card strong{display:block; font-size:1.12rem; color:var(--deep); margin-bottom:8px}
+    .link-card span{color:var(--muted); font-size:.96rem}
+    .mini-note{font-size:.94rem; color:#6b5a47; margin-top:12px}
+    .projects{
+      display:grid; grid-template-columns:repeat(2,1fr); gap:18px;
+    }
+    .project-card{
+      padding:22px; border-radius:22px;
+      background:rgba(255,255,255,.7); border:1px solid rgba(170,133,80,.18);
+      box-shadow:var(--shadow);
+    }
+    .project-card h3{margin:0 0 8px; font-size:1.06rem; color:var(--deep)}
+    .project-card p{margin:0; color:var(--muted)}
+    .add-box{
+      border:2px dashed rgba(181,138,75,.45);
+      background:rgba(247,240,226,.5);
+    }
+    .steps{margin:0; padding-left:20px; color:#5d5041}
+    .steps li{margin:8px 0}
+    .footer{
+      margin-top:48px; padding-top:22px; border-top:1px solid var(--line);
+      display:flex; justify-content:space-between; gap:12px; color:#786857; font-size:.92rem;
+    }
+    @media (max-width: 900px){
+      .hero,.intro-grid,.cards,.projects{grid-template-columns:1fr}
+      .hero{padding-bottom:48px}
+      .hero-art{min-height:340px}
+    }
+    @media (max-width: 640px){
+      .wrap{width:min(100% - 28px, 1120px)}
+      .nav{padding-top:18px}
+      .nav-links{gap:14px}
+      .brand{font-size:.72rem; letter-spacing:.11em}
+      .panel,.link-card,.project-card{padding:20px}
+      .footer{flex-direction:column}
+    }
   </style>
 </head>
 <body>
-<header class="hero" id="top">
-  <nav class="nav wrap" aria-label="Main navigation">
-    <a class="brand" href="#top">MOSHE MORGENSTERN</a>
-    <div class="links"><a href="#about">About</a><a href="#contact">Connect</a></div>
-  </nav>
-  <div class="hero-content wrap">
-    <span class="eyebrow">Welcome</span>
-    <h1>Moshe<br>Morgenstern</h1>
-    <div class="gold-line" aria-hidden="true"></div>
-    <p>Technology. Leadership. Perspective.<br>A personal space to share a little about who I am and what matters to me.</p>
-  </div>
-</header>
-<main>
-  <section class="content wrap" id="about" aria-labelledby="about-title">
-    <div class="section-grid">
-      <div class="section-label">A little about me</div>
-      <div>
-        <h2 id="about-title">A practical approach to technology and leadership.</h2>
-        <p>I'm Moshe Morgenstern. My professional focus is on technology leadership, solving complex problems, and helping people and organizations work more effectively.</p>
-        <p>I value thoughtful decisions, clear communication, and solutions that make a meaningful difference in everyday life.</p>
+  <header class="site-top" id="top">
+    <div class="wrap">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#top">MOSHE MORGENSTERN</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#torah-links">Favorite Torah Links</a>
+          <a href="#projects">My Sites</a>
+        </div>
+      </nav>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <span class="eyebrow">Torah • Connection • Growth</span>
+          <h1 id="hero-title">Moshe<br>Morgenstern</h1>
+          <p class="hebrew">תורה • חיבור • השראה</p>
+          <p class="lead">A personal corner on the web for Torah inspiration, meaningful resources, and selected links that reflect what I value — learning, clarity, community, and thoughtful living.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#torah-links">Explore Favorite Links</a>
+            <a class="btn secondary" href="#projects">View My Sites & Projects</a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="scroll-frame">
+            <div class="sketch-card">
+              <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" role="presentation">
+                <rect width="400" height="500" fill="transparent"/>
+                <g fill="none" stroke="#70553a" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M62 437c48-25 100-35 157-35 58 0 103 8 127 24" stroke-width="2.1" opacity=".35"/>
+                  <path d="M131 162c0-38 31-69 69-69 38 0 69 31 69 69 0 25-13 46-32 58 23 13 38 37 38 65v39" stroke-width="3.2"/>
+                  <path d="M126 324v-32c0-34 24-59 53-68" stroke-width="3.2"/>
+                  <path d="M170 167c11 11 22 16 30 16 9 0 20-5 32-16" stroke-width="2.6" opacity=".6"/>
+                  <path d="M149 157c4-35 31-57 51-57 21 0 47 23 51 60" stroke-width="3.2" opacity=".75"/>
+                  <path d="M160 145c-8 6-12 15-12 26 0 8 2 16 6 22" stroke-width="2.4" opacity=".45"/>
+                  <path d="M242 145c7 5 12 14 12 26 0 8-2 15-6 21" stroke-width="2.4" opacity=".45"/>
+                  <path d="M157 240c12 14 27 20 44 20 17 0 33-6 46-21" stroke-width="2.3" opacity=".55"/>
+                  <path d="M157 334c26 15 58 22 97 22 27 0 52-4 77-13" stroke-width="2.4" opacity=".75"/>
+                  <path d="M128 325c-13 10-19 24-19 39 0 41 43 64 118 64 69 0 118-20 118-60 0-15-7-30-22-40" stroke-width="3"/>
+                  <path d="M141 366c33 12 65 16 97 16 33 0 67-5 103-17" stroke-width="2.3" opacity=".55"/>
+                  <path d="M122 118c19-22 50-38 80-38 25 0 53 9 77 28" stroke-width="2.2" opacity=".45"/>
+                  <path d="M118 100c28-27 54-42 87-42 41 0 77 16 106 49" stroke-width="2.6" opacity=".35"/>
+                  <path d="M88 445h225" stroke-width="1.6" opacity=".3"/>
+                </g>
+              </svg>
+              <div class="sketch-label">
+                <strong>Sketch-style placeholder</strong>
+                <span>We can replace this with a real photo or a personalized sketch later.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="section-title"><h2 id="about-title">A more personal home page</h2></div>
+      <div class="intro-grid">
+        <div class="panel">
+          <p>This version is designed to feel warmer and more personal — less like a corporate bio and more like a thoughtful landing page shaped by Torah, values, and meaningful online connections.</p>
+          <p>It can continue to evolve over time. We can add your own websites, shiurim, projects, favorite seforim, a brief personal note, or even a family-friendly photo later on.</p>
+          <p class="quote">“A simple page, but with heart — something that reflects who you are.”</p>
+        </div>
+        <div class="panel">
+          <p><strong>Theme direction:</strong> parchment tones, gold accents, and an elegant layout inspired by classic Jewish books and timeless design.</p>
+          <p><strong>What it includes:</strong> favorite Torah links, your own websites/projects section, and a flexible structure that can grow without becoming cluttered.</p>
+          <p><strong>Good next upgrade:</strong> if you upload a portrait, I can replace the placeholder art with a more personal sketch-style image.</p>
+        </div>
       </div>
-    </div>
-    <div class="values" aria-label="Areas of interest">
-      <div class="value"><h3>Technology</h3><p>Finding practical ways to put new ideas and tools to work.</p></div>
-      <div class="value"><h3>Leadership</h3><p>Building clarity, trust, and a shared sense of purpose.</p></div>
-      <div class="value"><h3>Perspective</h3><p>Keeping the bigger picture in mind and focusing on what matters.</p></div>
-    </div>
-  </section>
-  <section class="contact" id="contact" aria-labelledby="contact-title">
-    <div class="wrap contact-inner">
-      <div><h2 id="contact-title">Thanks for visiting.</h2><p>This is my personal corner of the web.</p></div>
-      <span class="contact-note">moshemorgenstern.com</span>
-    </div>
-  </section>
-</main>
-<footer class="footer wrap"><span>© <span id="year">2026</span> Moshe Morgenstern</span><span>Personal website</span></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+    </section>
+
+    <section class="section" id="torah-links" aria-labelledby="torah-links-title">
+      <div class="section-title"><h2 id="torah-links-title">Favorite Torah links</h2></div>
+      <div class="cards">
+        <a class="link-card" href="https://www.rabbiDG.com" target="_blank" rel="noopener noreferrer">
+          <small>Featured</small>
+          <strong>RabbiDG.com</strong>
+          <span>A meaningful connection and Torah resource you wanted highlighted on the page.</span>
+        </a>
+        <a class="link-card" href="https://www.torahanytime.com" target="_blank" rel="noopener noreferrer">
+          <small>Featured</small>
+          <strong>TorahAnytime.com</strong>
+          <span>A widely used source for shiurim, Torah learning, and inspiration anytime.</span>
+        </a>
+        <a class="link-card" href="https://www.zichronraizel.com" target="_blank" rel="noopener noreferrer">
+          <small>Featured</small>
+          <strong>ZichronRaizel.com</strong>
+          <span>Included here as another personal link you wanted represented.</span>
+        </a>
+      </div>
+      <p class="mini-note">We can easily add more favorites here — for example, specific rabbis, organizations, chesed resources, or learning platforms.</p>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="section-title"><h2 id="projects-title">My websites & projects</h2></div>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Personal Website</h3>
+          <p>This main homepage can serve as your central hub and direct visitors to the sites and resources most important to you.</p>
+        </div>
+        <div class="project-card add-box">
+          <h3>Add another site here</h3>
+          <p>This section is intentionally designed so you can list your own websites, pages, or projects one by one as they grow.</p>
+        </div>
+        <div class="project-card add-box">
+          <h3>Add a learning or community resource</h3>
+          <p>You might use this for a special project, a family-related site, a Torah initiative, or another page you want visitors to find easily.</p>
+        </div>
+        <div class="project-card">
+          <h3>Easy to update later</h3>
+          <p>Because this is a simple static site, I can add or remove links for you quickly anytime, without rebuilding the whole page.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="update" aria-labelledby="update-title">
+      <div class="section-title"><h2 id="update-title">How we can keep it flexible</h2></div>
+      <div class="panel">
+        <ol class="steps">
+          <li>Add more favorite links as you think of them.</li>
+          <li>Replace the sketch placeholder with an uploaded photo or a stylized portrait.</li>
+          <li>Add a short personal message or Torah thought near the top.</li>
+          <li>Create a dedicated page later if you want a fuller collection of resources.</li>
+        </ol>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> Moshe Morgenstern</div>
+      <div>Built as a personal Torah-inspired landing page</div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
